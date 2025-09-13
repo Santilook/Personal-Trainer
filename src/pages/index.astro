@@ -1,13 +1,62 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Entrenador from "../assets/Personas-entrenando.webp";
-
+import PersonasCorriendo from "../assets/Personas-corriendo.webp";
+import Logo from "../assets/Logo.webp";
 
 ---
+
 <Layout>
-	<img src={Entrenador.src} alt="asd" class="h-[100vh] w-full object-cover opacity-25"/>
-	<div class="text-white flex justify-center items-center my-40 absolute inset-0">
-		<h1 class="flex flex-col"><span class="text-3xl">Entrenador</span><span class="uppercase text-[10rem] tracking-[50px] ml-10 font-[Bebas Neue]">Personal</span><span class="text-3xl text-end">Carlos Aguilera</span></h1>
-	</div>
-	<section class="h-[100vh]"></section>
+  <div id="hero-section" class="relative">
+      <img
+        src={Entrenador.src}
+        alt="asd"
+        class="h-[100vh] w-full object-cover opacity-25"
+      />
+      <div
+        class="text-white flex justify-center items-center my-40 absolute inset-0"
+      >
+        <h1 class="flex flex-col">
+          <span class="text-3xl">Entrenador</span><span
+            class="titulo-dos uppercase text-[12rem] tracking-[80px] ml-10 font-bold"
+            >Personal</span
+          ><span class="text-3xl text-end">Carlos Aguilera</span>
+        </h1>
+        <img id="logo" src={Logo.src} alt="Logo" class="absolute left-[2000px] bottom-[40px] h-[250px] w-[250px] scale-112 opacity-0" />
+      </div>
+  </div>
+  <script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Timeline para controlar animación y hold
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#hero-section",
+        start: "top top",
+        end: "+=100%",
+        pin: true,
+        scrub: 1,
+        anticipatePin: 1,
+      }
+    });
+
+    // Animación de aparición y movimiento del logo
+    tl.to("#logo", {
+      opacity: 1,
+      x: -1200,
+      y: 0,
+      scale: 1,
+      duration: 2,
+      ease: "power2.out"
+    });
+    // Mantener el logo visible unos segundos más (2 segundos)
+    tl.to("#logo", {
+      opacity: 1,
+      duration: 2,
+      ease: "none"
+    });
+  </script>
 </Layout>
