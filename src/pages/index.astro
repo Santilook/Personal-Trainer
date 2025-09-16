@@ -3,7 +3,21 @@ import Layout from "../layouts/Layout.astro";
 import Entrenador from "../assets/Personas-entrenando.webp";
 import PersonasCorriendo from "../assets/Personas-corriendo.webp";
 import Logo from "../assets/Logo.webp";
+import Pesas from "../assets/pesas-verdes.webp";
+import about1 from "../assets/img-about-us.webp";
+import about2 from "../assets/img2-about-us.webp";
 
+// Define el patrón a repetir
+const items = [
+  { label: "Training" },
+  { label: "Fitness Sports" },
+];
+
+// Cuántas veces quieres repetir el patrón
+const repeat = 12;
+
+// Genera el array final
+const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
 ---
 
 <Layout>
@@ -11,7 +25,7 @@ import Logo from "../assets/Logo.webp";
       <img
         src={Entrenador.src}
         alt="asd"
-        class="h-[100vh] w-full object-cover opacity-25"
+        class="h-[100vh] w-full object-cover opacity-25 mask-b-from-80% mask-b-to-100%"
       />
       <div
         class="text-white flex justify-center items-center my-40 absolute inset-0"
@@ -25,6 +39,73 @@ import Logo from "../assets/Logo.webp";
         <img id="logo" src={Logo.src} alt="Logo" class="absolute left-[2000px] bottom-[40px] h-[250px] w-[250px] scale-112 opacity-0" />
       </div>
   </div>
+
+  <section class="relative w-full">
+    <div class="absolute w-full top-0 rotate-[-10deg] flex items-center justify-center overflow-hidden">
+      <div class="flex flex-row items-center bg-white py-6 px-0 min-w-full gap-6 shadow-lg mask-r-from-80% mask-r-to-100% mask-l-from-80% mask-l-to-100%">
+        <div class="flex animate-scroll-left items-center gap-6 min-w-max">
+          {repeatedItems.map((item, i) => (
+            <>
+              <h2 class="text-gray-800 font-bold text-4xl">{item.label}</h2>
+              <img src={Pesas.src} alt="Pesas" class="h-8" />
+            </>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div class="absolute w-full top-0 rotate-[8deg] flex items-center justify-center overflow-hidden">
+      <div class="flex flex-row items-center bg-gray-800 py-6 px-0 min-w-full gap-6 shadow-lg mask-r-from-80% mask-r-to-100% mask-l-from-80% mask-l-to-100%">
+        <div class="flex animate-scroll-left items-center gap-6 min-w-max">
+          {repeatedItems.map((item, i) => (
+            <>
+              <h2 class="text-white font-bold text-4xl">{item.label}</h2>
+              <img src={Pesas.src} alt="Pesas" class="h-8" />
+            </>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="flex justify-around mt-100">
+    <picture class="relative flex flex-col">
+      <img src={about2.src} alt="About Us 1" class="object-cover h-[600px] w-[390px]" />
+      <img src={about1.src} alt="About Us 2" class="absolute left-[420px] top-20 object-cover h-[600px] w-[390px]" />
+    </picture>
+    <div class="max-w-lg text-white text-start">
+      <span class="tipografia text-2xl font-bold uppercase text-green-600">Sobre mi</span>
+      <h2 class="right-0 text-[3rem] font-bold py-6">Sobre Nosotros</h2>
+      <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, maiores. Necessitatibus commodi, aspernatur libero doloremque illo amet, labore ad cum alias minus delectus. Voluptate debitis ducimus impedit aut neque odit aspernatur? Quibusdam voluptates eaque tenetur saepe ratione omnis perspiciatis vero?.</p>
+      <section class="w-full bg-gray-800 rounded-xl mt-10 py-10 px-4 flex flex-wrap justify-center gap-10">
+        <div class="flex flex-col items-center">
+          <span class="text-4xl font-extrabold text-white">+200</span>
+          <span class="text-gray-300 text-lg mt-2">Clientes Satisfechos</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-4xl font-extrabold text-white">10+</span>
+          <span class="text-gray-300 text-lg mt-2">Años de Experiencia</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-4xl font-extrabold text-white">50+</span>
+          <span class="text-gray-300 text-lg mt-2">Transformaciones</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-4xl font-extrabold text-white">100%</span>
+          <span class="text-gray-300 text-lg mt-2">Plan Personalizado</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-4xl font-extrabold text-white">24/7</span>
+          <span class="text-gray-300 text-lg mt-2">Soporte Online</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-4xl font-extrabold text-white">+30</span>
+          <span class="text-gray-300 text-lg mt-2">Clases Grupales</span>
+        </div>
+      </section>
+    </div>
+  </section>
+
+
   <script>
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";

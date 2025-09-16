@@ -39,8 +39,32 @@ import Navbar from "../components/Navbar.astro";
 	h1{
 		font-family: 'Anton', sans-serif;
 	}
-	
-	
 
+	.tipografia {
+		font-family: 'Anton', sans-serif;
+		letter-spacing: 2px;
+	}
 
+	.animate-scroll-left {
+		animation: scroll-left 160s linear infinite;
+	}
+	.animate-scroll-right {
+		animation: scroll-right 160s linear infinite;
+	}
+	@keyframes scroll-left {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+	@keyframes scroll-right {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(50%);
+		}
+	}
 </style>
