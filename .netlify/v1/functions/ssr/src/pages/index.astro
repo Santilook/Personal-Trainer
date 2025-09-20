@@ -19,45 +19,69 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
 ---
 
 <Layout>
-  <div id="hero-section" class="relative">
+  <div id="hero-section" class="relative overflow-hidden">
     <img
       src={Entrenador.src}
-      alt="asd"
-      class="h-[100vh] w-full object-cover opacity-25 mask-b-from-80% mask-b-to-100%"
+      alt="Personas entrenando en gimnasio, fondo difuminado"
+      title="Entrenador Personal Carlos Aguilera"
+      class="h-[100svh] md:h-[100vh] w-full object-cover object-center opacity-25 mask-b-from-80% mask-b-to-100%"
+      loading="lazy"
     />
     <div
-      class="text-white flex justify-center items-center my-40 absolute inset-0"
+      class="text-white flex justify-center items-center my-20 md:my-40 absolute inset-0"
     >
-      <h1 class="flex flex-col">
-        <span class="text-3xl">Entrenador</span><span
-          class="titulo-dos uppercase text-[12rem] tracking-[80px] ml-10 font-bold"
-          >Personal</span
-        ><span class="text-3xl text-end">Carlos Aguilera</span>
+      <h1
+        class="relative w-full flex items-center justify-center overflow-visible"
+      >
+        <span
+          class="absolute left-10 bottom-15 md:left-15 md:bottom-30 text-2xl md:text-3xl font-bold lg:bottom-50 lg:left-25 2xl:left-35 3xl:left-60"
+          >Entrenador</span
+        >
+        <span
+          class="titulo-dos uppercase font-bold text-[3.3rem] md:text-[6rem] tracking-[0.18em] md:tracking-[35px] leading-[0.85] md:leading-[0.75] mx-auto text-center lg:text-[11rem] lg:tracking-[40px] 2xl:tracking-[70px]"
+          >PERSONAL</span
+        >
+        <span
+          class="absolute right-10 top-15 md:right-25 md:top-30 text-2xl md:text-3xl font-bold lg:top-50 lg:right-35 2xl:right-50 3xl:right-75"
+          >Carlos Aguilera</span
+        >
       </h1>
       <img
         id="logo"
         src={Logo.src}
-        alt="Logo"
-        class="absolute left-[2000px] bottom-[40px] h-[250px] w-[250px] scale-112 opacity-0"
+        alt="Logo Carlos Aguilera Personal Trainer"
+        title="Logo Carlos Aguilera Personal Trainer"
+        class="absolute left-0 bottom-20 h-40 w-40 opacity-0 md:opacity-0 md:bottom-50 md:left-50 lg:top-50 lg:left-100 2xl:top-85 2xl:left-110 md:h-[200px] md:w-[200px] lg:h-[200px] lg:w-[200px] 2xl:h-[300px] 2xl:w-[300px] 3xl:left-[610px] z-20 transition-all duration-700"
+        loading="lazy"
       />
     </div>
   </div>
 
   <!-- Sección de texto animado -->
 
-  <section class="relative w-full mt-30">
+  <section class="relative w-full md:mt-30">
     <div
-      class="absolute w-full top-0 rotate-[-10deg] flex items-center justify-center overflow-hidden"
+      class="absolute w-full top-0 rotate-[-10deg] md:rotate-[-10deg] flex items-center justify-center overflow-hidden"
     >
       <div
-        class="flex flex-row items-center bg-white py-6 px-0 min-w-full gap-6 shadow-lg mask-r-from-80% mask-r-to-100% mask-l-from-80% mask-l-to-100%"
+        class="flex flex-row items-center bg-white py-3 md:py-6 px-0 min-w-full gap-3 md:gap-6 shadow-lg mask-r-from-80% mask-r-to-100% mask-l-from-80% mask-l-to-100%"
       >
-        <div class="flex animate-scroll-left items-center gap-6 min-w-max">
+        <div
+          class="flex animate-scroll-left items-center gap-3 md:gap-6 min-w-max"
+        >
           {
             repeatedItems.map((item, i) => (
               <>
-                <h2 class="text-gray-800 font-bold text-4xl">{item.label}</h2>
-                <img src={Pesas.src} alt="Pesas" class="h-8" />
+                <h2 class="text-gray-800 font-bold text-xl md:text-4xl">
+                  {item.label}
+                </h2>
+                <img
+                  src={Pesas.src}
+                  alt="Icono pesas"
+                  title="Pesas"
+                  class="h-5 md:h-8"
+                  loading="lazy"
+                />
               </>
             ))
           }
@@ -65,17 +89,27 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
       </div>
     </div>
     <div
-      class="absolute w-full top-0 rotate-[8deg] flex items-center justify-center overflow-hidden"
+      class="absolute w-full top-0 rotate-[10deg] md:rotate-[8deg] flex items-center justify-center overflow-hidden"
     >
       <div
-        class="flex flex-row items-center bg-gray-800 py-6 px-0 min-w-full gap-6 shadow-lg mask-r-from-80% mask-r-to-100% mask-l-from-80% mask-l-to-100%"
+        class="flex flex-row items-center bg-gray-800 py-3 md:py-6 px-0 min-w-full gap-3 md:gap-6 shadow-lg mask-r-from-80% mask-r-to-100% mask-l-from-80% mask-l-to-100%"
       >
-        <div class="flex animate-scroll-left items-center gap-6 min-w-max">
+        <div
+          class="flex animate-scroll-left items-center gap-3 md:gap-6 min-w-max"
+        >
           {
             repeatedItems.map((item, i) => (
               <>
-                <h2 class="text-white font-bold text-4xl">{item.label}</h2>
-                <img src={Pesas.src} alt="Pesas" class="h-8" />
+                <h2 class="text-white font-bold text-xl md:text-4xl">
+                  {item.label}
+                </h2>
+                <img
+                  src={Pesas.src}
+                  alt="Icono pesas"
+                  title="Pesas"
+                  class="h-5 md:h-8"
+                  loading="lazy"
+                />
               </>
             ))
           }
@@ -83,61 +117,231 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
       </div>
     </div>
   </section>
+  <!-- Carousel visible en moviles, tablets y notebooks. En lg+ se posiciona en fila (carousel izquierda, info derecha) -->
+  <div
+    id="controls-carousel"
+    class="relative flex flex-col lg:flex-row w-full mt-40 md:mt-100 lg:mt-120 2xl:hidden"
+    data-carousel="static"
+  >
+    <!-- Carousel wrapper (izquierda en lg+) -->
+    <div
+      class="relative w-full lg:w-1/2 h-100 md:h-200 lg:h-[570px] overflow-hidden rounded-lg"
+    >
+      <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src={about1.src}
+          class="absolute inset-0 w-full h-full object-cover object-top"
+          alt="Entrenamiento - imagen superior 1"
+          title="Entrenamiento imagen 1"
+          loading="lazy"
+        />
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <img
+          src={about2.src}
+          class="absolute inset-0 w-full h-full object-cover object-top"
+          alt="Entrenamiento - imagen superior 2"
+          title="Entrenamiento imagen 2"
+          loading="lazy"
+        />
+      </div>
 
-  <!-- Sección Sobre Nosotros -->
+      <!-- Slider controls (sobre el carousel) -->
+      <button
+        type="button"
+        class="absolute left-2 top-1/2 z-30 transform -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 focus:outline-none"
+        data-carousel-prev
+        aria-label="Previous slide"
+      >
+        <svg
+          class="w-4 h-4 text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 1 1 5l4 4"></path>
+        </svg>
+      </button>
 
-  <section id="about" class="flex justify-around mt-90 py-30">
+      <button
+        type="button"
+        class="absolute right-2 top-1/2 z-30 transform -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 focus:outline-none"
+        data-carousel-next
+        aria-label="Next slide"
+      >
+        <svg
+          class="w-4 h-4 text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 9 4-4-4-4"></path>
+        </svg>
+      </button>
+    </div>
 
-    <picture class="relative flex flex-col">
+    <!-- Información (derecha en lg+) -->
+    <div class="w-full lg:w-1/2 text-white pl-0 lg:pl-8 mt-6 lg:mt-0">
+      <span
+        class="tipografia text-xl md:text-2xl font-bold uppercase text-green-600"
+        >Sobre mi</span
+      >
+      <h2 class="right-0 text-2xl md:text-[3rem] font-bold py-4 md:py-6">
+        Sobre Nosotros
+      </h2>
+      <p class="text-base md:text-lg">
+        Entrenador personal certificado con más de años de experiencia ayudando
+        a transformar vidas. Mi misión es guiarte a lograr tus objetivos de
+        salud y bienestar con planes personalizados, motivación constante y
+        resultados reales.
+      </p>
+      <section
+        class="w-full bg-gray-800 rounded-xl mt-6 md:mt-10 py-6 md:py-10 px-2 md:px-4 flex flex-wrap justify-center gap-4 md:gap-10"
+      >
+        <div class="flex flex-col items-center">
+          <span class="text-2xl md:text-4xl font-extrabold text-white"
+            >+200</span
+          >
+          <span class="text-gray-300 text-sm md:text-lg mt-2"
+            >Clientes Satisfechos</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-2xl md:text-4xl font-extrabold text-white">10+</span
+          >
+          <span class="text-gray-300 text-sm md:text-lg mt-2"
+            >Años de Experiencia</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-2xl md:text-4xl font-extrabold text-white">50+</span
+          >
+          <span class="text-gray-300 text-sm md:text-lg mt-2"
+            >Transformaciones</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-2xl md:text-4xl font-extrabold text-white"
+            >100%</span
+          >
+          <span class="text-gray-300 text-sm md:text-lg mt-2"
+            >Plan Personalizado</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-2xl md:text-4xl font-extrabold text-white"
+            >24/7</span
+          >
+          <span class="text-gray-300 text-sm md:text-lg mt-2"
+            >Soporte Online</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-2xl md:text-4xl font-extrabold text-white">+30</span
+          >
+          <span class="text-gray-300 text-sm md:text-lg mt-2"
+            >Clases Grupales</span
+          >
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Sección Sobre Nosotros en escritorio -->
+
+  <section
+    id="about"
+    class="flex flex-row justify-around items-center mt-110 py-10 gap-16 hidden 2xl:flex"
+  >
+    <picture class="relative flex flex-col w-1/2 max-w-[450px]">
       <img
         src={about2.src}
-        alt="About Us 1"
-        class="object-cover h-[600px] w-[390px]"
+        alt="Entrenador personal guiando a cliente"
+        title="Entrenador personal guiando a cliente"
+        class="object-cover h-[600px] w-[400px] 3xl:h-[600px] 3xl:w-full rounded-xl shadow-lg"
+        loading="lazy"
       />
       <img
         src={about1.src}
-        alt="About Us 2"
-        class="absolute left-[420px] top-20 object-cover h-[600px] w-[390px]"
+        alt="Grupo de personas entrenando en gimnasio"
+        title="Grupo de personas entrenando en gimnasio"
+        class="absolute right-[-480px] top-10 object-cover h-[600px] w-[400px] 3xl:h-[600px] 3xl:w-full 3xl:right-[-700px] rounded-xl shadow-lg -translate-x-1/2"
+        loading="lazy"
       />
     </picture>
-    <div class="max-w-lg text-white text-start">
-      <span class="tipografia text-2xl font-bold uppercase text-green-600"
+    <div class="w-1/2 max-w-lg text-white text-start mt-0">
+      <span
+        class="tipografia text-xl md:text-2xl font-bold uppercase text-green-600"
         >Sobre mi</span
       >
-      <h2 class="right-0 text-[3rem] font-bold py-6">Sobre Nosotros</h2>
-      <p class="text-lg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-        maiores. Necessitatibus commodi, aspernatur libero doloremque illo amet,
-        labore ad cum alias minus delectus. Voluptate debitis ducimus impedit
-        aut neque odit aspernatur? Quibusdam voluptates eaque tenetur saepe
-        ratione omnis perspiciatis vero?.
+      <h2 class="right-0 text-2xl md:text-[3rem] font-bold py-4 md:py-6">
+        Sobre Nosotros
+      </h2>
+      <p class="text-base md:text-lg">
+        Entrenador personal certificado con más de años de experiencia ayudando
+        a transformar vidas. Mi misión es guiarte a lograr tus objetivos de
+        salud y bienestar con planes personalizados, motivación constante y
+        resultados reales.
       </p>
       <section
-        class="w-full bg-gray-800 rounded-xl mt-10 py-10 px-4 flex flex-wrap justify-center gap-10"
+        class="w-full bg-gray-800 rounded-xl mt-6 md:mt-10 py-6 md:py-10 px-2 md:px-4 flex flex-wrap justify-center gap-4 md:gap-10"
       >
         <div class="flex flex-col items-center">
-          <span class="text-4xl font-extrabold text-white">+200</span>
-          <span class="text-gray-300 text-lg mt-2">Clientes Satisfechos</span>
+          <span class="text-2xl md:text-4xl font-extrabold text-white"
+            >+200</span
+          >
+          <span class="text-gray-300 text-sm md:text-lg mt-2"
+            >Clientes Satisfechos</span
+          >
         </div>
         <div class="flex flex-col items-center">
-          <span class="text-4xl font-extrabold text-white">10+</span>
-          <span class="text-gray-300 text-lg mt-2">Años de Experiencia</span>
+          <span class="text-2xl md:text-4xl font-extrabold text-white">10+</span
+          >
+          <span class="text-gray-300 text-sm md:text-lg mt-2"
+            >Años de Experiencia</span
+          >
         </div>
         <div class="flex flex-col items-center">
-          <span class="text-4xl font-extrabold text-white">50+</span>
-          <span class="text-gray-300 text-lg mt-2">Transformaciones</span>
+          <span class="text-2xl md:text-4xl font-extrabold text-white">50+</span
+          >
+          <span class="text-gray-300 text-sm md:text-lg mt-2"
+            >Transformaciones</span
+          >
         </div>
         <div class="flex flex-col items-center">
-          <span class="text-4xl font-extrabold text-white">100%</span>
-          <span class="text-gray-300 text-lg mt-2">Plan Personalizado</span>
+          <span class="text-2xl md:text-4xl font-extrabold text-white"
+            >100%</span
+          >
+          <span class="text-gray-300 text-sm md:text-lg mt-2"
+            >Plan Personalizado</span
+          >
         </div>
         <div class="flex flex-col items-center">
-          <span class="text-4xl font-extrabold text-white">24/7</span>
-          <span class="text-gray-300 text-lg mt-2">Soporte Online</span>
+          <span class="text-2xl md:text-4xl font-extrabold text-white"
+            >24/7</span
+          >
+          <span class="text-gray-300 text-sm md:text-lg mt-2"
+            >Soporte Online</span
+          >
         </div>
         <div class="flex flex-col items-center">
-          <span class="text-4xl font-extrabold text-white">+30</span>
-          <span class="text-gray-300 text-lg mt-2">Clases Grupales</span>
+          <span class="text-2xl md:text-4xl font-extrabold text-white">+30</span
+          >
+          <span class="text-gray-300 text-sm md:text-lg mt-2"
+            >Clases Grupales</span
+          >
         </div>
       </section>
     </div>
@@ -145,131 +349,419 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
 
   <!-- Seccion Entrenamientos Personalizados -->
 
-  <section id="entrenamiento-personalizado" class="py-16 text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="tipografia text-3xl md:text-4xl font-bold mb-12 opacity-0" id="entrenamiento-titulo">
-        Entrenamiento Personalizado
+  <section id="entrenamiento-personalizado" class="mt-20 lg:py-16 text-white">
+    <div class="container mx-auto px-2 md:px-4 text-center">
+      <h2
+        class="tipografia text-2xl md:text-4xl font-bold mb-6 md:mb-12 opacity-0"
+        id="entrenamiento-titulo"
+      >
+        Entrenamientos Personalizados
       </h2>
       <div class="relative inline-block">
         <img
           src={Entrenamiento.src}
-          alt="Modelos de fitness"
-          class="object-cover h-[680px] w-[390px] mx-auto rounded-lg opacity-0"
+          alt="Modelos de fitness mostrando resultados de entrenamiento"
+          title="Entrenamiento personalizado"
+          class="object-cover h-[700px] w-[95vw] md:h-[600px] md:w-[350px] lg:h-[700px] lg:w-[400px] mx-auto rounded-lg opacity-0"
           id="entrenamiento-img"
+          loading="lazy"
         />
         <div class="hidden md:block">
           <!-- Hombros -->
-          <div class="absolute left-60 top-[10%] opacity-0" id="entrenamiento-hombros">
-            <div class="flex items-center space-x-4">
+          <div
+            class="absolute left-10 md:left-55 top-[10%] lg:left-60 opacity-0"
+            id="entrenamiento-hombros"
+          >
+            <div class="flex items-center space-x-2 md:space-x-4">
               <div class="flex items-center">
-                <div class="w-50 h-px bg-white border-t-2 border-dashed"></div>
-                <div class="w-4 h-4 bg-lime-400 rounded-full border-2 border-white"></div>
+                <div
+                  class="w-20 md:w-25 lg:w-40 h-px bg-white border-t-2 border-dashed"
+                >
+                </div>
+                <div
+                  class="w-3 md:w-4 h-3 md:h-4 bg-lime-400 rounded-full border-2 border-white"
+                >
+                </div>
               </div>
-              <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg shadow-lg backdrop-blur-sm w-56 text-left">
-                <h3 class="font-bold text-lg text-lime-400">Hombros (Deltoides)</h3>
-                <p class="text-sm">Para tonificar y dar forma: Press militar, elevaciones laterales y pájaros con mancuernas.</p>
+              <div
+                class="bg-gray-800 bg-opacity-50 p-2 md:p-4 rounded-lg shadow-lg backdrop-blur-sm w-40 md:w-56 text-left"
+              >
+                <h3 class="font-bold text-base md:text-lg text-lime-400">
+                  Hombros (Deltoides)
+                </h3>
+                <p class="text-xs md:text-sm">
+                  Para tonificar y dar forma: Press militar, elevaciones
+                  laterales y pájaros con mancuernas.
+                </p>
               </div>
             </div>
           </div>
           <!-- Pectorales -->
-          <div class="absolute right-65 top-[15%] opacity-0" id="entrenamiento-pectorales">
-            <div class="flex items-center space-x-4 flex-row-reverse">
+          <div
+            class="absolute right-10 md:right-55 top-[15%] lg:right-65 opacity-0"
+            id="entrenamiento-pectorales"
+          >
+            <div
+              class="flex items-center space-x-2 md:space-x-4 flex-row-reverse"
+            >
               <div class="flex items-center">
-                <div class="w-4 h-4 bg-cyan-400 rounded-full border-2 border-white"></div>
-                <div class="w-50 h-px bg-white border-t-2 border-dashed"></div>
+                <div
+                  class="w-3 md:w-4 h-3 md:h-4 bg-cyan-400 rounded-full border-2 border-white"
+                >
+                </div>
+                <div
+                  class="w-20 md:w-20 lg:w-40 h-px bg-white border-t-2 border-dashed"
+                >
+                </div>
               </div>
-              <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg shadow-lg backdrop-blur-sm w-56 text-left">
-                <h3 class="font-bold text-lg text-cyan-400">Pectorales</h3>
-                <p class="text-sm">Ejercicios clave para volumen y definición: Press de banca, aperturas con mancuernas y flexiones.</p>
+              <div
+                class="bg-gray-800 bg-opacity-50 p-2 md:p-4 rounded-lg shadow-lg backdrop-blur-sm w-40 md:w-56 text-left"
+              >
+                <h3 class="font-bold text-base md:text-lg text-cyan-400">
+                  Pectorales
+                </h3>
+                <p class="text-xs md:text-sm">
+                  Ejercicios clave para volumen y definición: Press de banca,
+                  aperturas con mancuernas y flexiones.
+                </p>
               </div>
             </div>
           </div>
           <!-- Glúteos -->
-          <div class="absolute left-55 bottom-[45%] opacity-0" id="entrenamiento-gluteos">
-            <div class="flex items-center space-x-4">
+          <div
+            class="absolute left-10 md:left-50 bottom-[42%] lg:left-60 lg:bottom-[45%] opacity-0"
+            id="entrenamiento-gluteos"
+          >
+            <div class="flex items-center space-x-2 md:space-x-4">
               <div class="flex items-center">
-                <div class="w-80 h-px bg-white border-t-2 border-dashed"></div>
-                <div class="w-4 h-4 bg-lime-400 rounded-full border-2 border-white"></div>
+                <div
+                  class="w-32 md:w-20 lg:w-50 h-px bg-white border-t-2 border-dashed"
+                >
+                </div>
+                <div
+                  class="w-3 md:w-4 h-3 md:h-4 bg-lime-400 rounded-full border-2 border-white"
+                >
+                </div>
               </div>
-              <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg shadow-lg backdrop-blur-sm w-56 text-left">
-                <h3 class="font-bold text-lg text-lime-400">Glúteos</h3>
-                <p class="text-sm">Fortalece y levanta con: Sentadillas, hip thrust y zancadas (lunges).</p>
+              <div
+                class="bg-gray-800 bg-opacity-50 p-2 md:p-4 rounded-lg shadow-lg backdrop-blur-sm w-40 md:w-56 text-left"
+              >
+                <h3 class="font-bold text-base md:text-lg text-lime-400">
+                  Glúteos
+                </h3>
+                <p class="text-xs md:text-sm">
+                  Fortalece y levanta con: Sentadillas, hip thrust y zancadas
+                  (lunges).
+                </p>
               </div>
             </div>
           </div>
           <!-- Pantorrillas -->
-          <div class="absolute right-55 top-[70%] opacity-0" id="entrenamiento-pantorrillas">
-            <div class="flex items-center space-x-4 flex-row-reverse">
+          <div
+            class="absolute right-20 md:right-47 top-[70%] lg:right-55 opacity-0"
+            id="entrenamiento-pantorrillas"
+          >
+            <div
+              class="flex items-center space-x-2 md:space-x-4 flex-row-reverse"
+            >
               <div class="flex items-center">
-                <div class="w-4 h-4 bg-cyan-400 rounded-full border-2 border-white"></div>
-                <div class="w-70 h-px bg-white border-t-2 border-dashed"></div>
+                <div
+                  class="w-3 md:w-4 h-3 md:h-4 bg-cyan-400 rounded-full border-2 border-white"
+                >
+                </div>
+                <div
+                  class="w-32 md:w-25 lg:w-40 h-px bg-white border-t-2 border-dashed"
+                >
+                </div>
               </div>
-              <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg shadow-lg backdrop-blur-sm w-56 text-left">
-                <h3 class="font-bold text-lg text-cyan-400">Pantorrillas (Gemelos)</h3>
-                <p class="text-sm">Para fuerza y definición en las piernas: Elevaciones de talones (de pie o sentado) y saltos de caja (box jumps).</p>
+              <div
+                class="bg-gray-800 bg-opacity-50 p-2 md:p-4 rounded-lg shadow-lg backdrop-blur-sm w-40 md:w-56 text-left"
+              >
+                <h3 class="font-bold text-base md:text-lg text-cyan-400">
+                  Pantorrillas (Gemelos)
+                </h3>
+                <p class="text-xs md:text-sm">
+                  Para fuerza y definición en las piernas: Elevaciones de
+                  talones (de pie o sentado) y saltos de caja (box jumps).
+                </p>
               </div>
             </div>
           </div>
+        </div>
+        <!-- Popover visible solo en movil para la seleccion de musculo -->
+
+        <!-- Boton pectorales -->
+        <button
+          data-popover-target="popover-pectorales"
+          data-popover-trigger="click"
+          type="button"
+          class="absolute top-40 left-25 w-6 h-6 bg-cyan-400 rounded-full border-2 border-white md:hidden inline-flex size-3"
+        >
+          <span
+            class="inline-flex h-full w-full animate-ping rounded-full bg-sky-600 opacity-75"
+          ></span>
+        </button>
+        <div
+          data-popover
+          id="popover-pectorales"
+          role="tooltip"
+          class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+        >
+          <div
+            class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+          >
+            <h3 class="font-semibold text-gray-900 dark:text-white">
+              Pectorales
+            </h3>
+          </div>
+          <div class="px-3 py-2">
+            <p>
+              Ejercicios clave para volumen y definición: Press de banca,
+              aperturas con mancuernas y flexiones.
+            </p>
+          </div>
+          <div data-popper-arrow></div>
+        </div>
+        <!-- Boton hombros -->
+        <button
+          data-popover-target="popover-hombros"
+          data-popover-trigger="click"
+          type="button"
+          class="absolute top-36 right-34 w-6 h-6 bg-lime-400 rounded-full border-2 border-white md:hidden inline-flex size-3"
+        >
+          <span
+            class="inline-flex h-full w-full animate-ping rounded-full bg-sky-600 opacity-75"
+          ></span>
+        </button>
+        <div
+          data-popover
+          id="popover-hombros"
+          role="tooltip"
+          class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+        >
+          <div
+            class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+          >
+            <h3 class="font-semibold text-gray-900 dark:text-white">
+              Hombros (Deltoides)
+            </h3>
+          </div>
+          <div class="px-3 py-2">
+            <p>
+              Para tonificar y dar forma: Press militar, elevaciones laterales y
+              pájaros con mancuernas.
+            </p>
+          </div>
+          <div data-popper-arrow></div>
+        </div>
+        <!-- Boton gluteos -->
+        <button
+          data-popover-target="popover-gluteos"
+          data-popover-trigger="click"
+          type="button"
+          class="absolute bottom-93 right-37 w-6 h-6 bg-lime-400 rounded-full border-2 border-white md:hidden inline-flex size-3"
+        >
+          <span
+            class="inline-flex h-full w-full animate-ping rounded-full bg-sky-600 opacity-75"
+          ></span>
+        </button>
+        <div
+          data-popover
+          id="popover-gluteos"
+          role="tooltip"
+          class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+        >
+          <div
+            class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+          >
+            <h3 class="font-semibold text-gray-900 dark:text-white">Glúteos</h3>
+          </div>
+          <div class="px-3 py-2">
+            <p>
+              Fortalece y levanta con: Sentadillas, hip thrust y zancadas
+              (lunges).
+            </p>
+          </div>
+          <div data-popper-arrow></div>
+        </div>
+        <!-- Boton pantorrillas -->
+        <button
+          data-popover-target="popover-pantorrillas"
+          data-popover-trigger="click"
+          type="button"
+          class="absolute bottom-35 left-37 w-6 h-6 bg-cyan-400 rounded-full border-2 border-white md:hidden inline-flex size-3"
+        >
+          <span
+            class="inline-flex h-full w-full animate-ping rounded-full bg-sky-600 opacity-75"
+          ></span>
+        </button>
+        <div
+          data-popover
+          id="popover-pantorrillas"
+          role="tooltip"
+          class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+        >
+          <div
+            class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+          >
+            <h3 class="font-semibold text-gray-900 dark:text-white">
+              Pantorrillas (Gemelos)
+            </h3>
+          </div>
+          <div class="px-3 py-2">
+            <p>
+              Para fuerza y definición en las piernas: Elevaciones de talones
+              (de pie o sentado) y saltos de caja (box jumps).
+            </p>
+          </div>
+          <div data-popper-arrow></div>
         </div>
       </div>
     </div>
   </section>
 
-  <a href="https://w.app/carlosaguileramusculacionyfitness" target="_blank"
-    ><svg
-      class="fixed right-[-140px] bottom-[-140px] size-100 cursor-pointer hover:scale-110 transition-transform duration-300"
-      viewBox="0 0 1440 320"
+<!-- boton menu redes sociales fija -->
+  <div data-dial-init class="fixed end-6 bottom-6 group z-50">
+    <div
+      id="speed-dial-menu-default"
+      class="flex flex-col items-center hidden mb-4 space-y-6"
     >
-      <use xlink:href="/assets/iconos.min.svg#whatsapp"></use>
-    </svg></a
-  >
+      <!-- Botón WhatsApp -->
+      <a
+        href="https://w.app/carlosaguileramusculacionyfitness" target="_blank" rel="noopener noreferrer"
+        class="flex justify-center items-center w-[70px] h-[70px] text-green-500 hover:text-green-700 shadow-xs hover:hover:scale-125 transition-transform delay-100"
+        aria-label="WhatsApp"
+      >
+        <!-- SVG WhatsApp desde iconos.min.svg -->
+        <svg class="size-40">
+          <use xlink:href="/assets/iconos.min.svg#whatsapp" />
+        </svg>
+      </a>
+      <!-- Botón Instagram -->
+      <a
+        href="https://www.instagram.com/carlos_sant_ag?igsh=MWpocGdiaHpwYmQ4OQ==" target="_blank" rel="noopener noreferrer"
+        class="flex justify-center items-center w-[70px] h-[70px] text-pink-500 hover:text-pink-700 shadow-xs hover:hover:scale-125 transition-transform delay-100"
+        aria-label="Instagram"
+      >
+        <!-- SVG Instagram desde iconos.min.svg -->
+        <svg class="size-30">
+          <use xlink:href="/assets/iconos.min.svg#instagram" />
+        </svg>
+      </a>
+    </div>
+    <button
+      type="button"
+      data-dial-toggle="speed-dial-menu-default"
+      aria-controls="speed-dial-menu-default"
+      aria-expanded="false"
+      class="flex items-center justify-center text-white bg-blue-700 rounded-full w-15 h-15 md:h-20 md:w-20 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+    >
+      <svg
+        class="w-5 h-5 md:w-8 md:h-8 transition-transform group-hover:rotate-45"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 18 18"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 1v16M1 9h16"></path>
+      </svg>
+      <span class="sr-only">Open actions menu</span>
+    </button>
+  </div>
+</Layout>
 
-  <script>
-    import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-    gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
-    // Timeline para controlar animación y hold
+  // Animación SOLO para mobile (<768px)
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    gsap.set("#logo", { left: 0, x: 0 });
+    gsap.to("#logo", {
+      left: "50%",
+      x: "-50%",
+      opacity: 1,
+      duration: 1.2,
+      ease: "ease-out",
+      delay: 0.5,
+    });
+  }
+
+  // Animación SOLO para md+
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    // Timeline para controlar animación y hold SOLO en md+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#hero-section",
         start: "top top",
         end: "+=100%",
         pin: true,
-        scrub: 1,
+        scrub: 0,
         anticipatePin: 1,
       },
     });
-
-    // Animación de aparición y movimiento del logo
     tl.to("#logo", {
       opacity: 1,
-      x: -1200,
-      y: 0,
-      scale: 1,
+      right: "50%",
+      x: "50%",
       duration: 2,
       ease: "power2.out",
     });
-    // Mantener el logo visible unos segundos más (2 segundos)
     tl.to("#logo", {
       opacity: 1,
       duration: 2,
       ease: "none",
     });
-    // Animacion Entrenamiento Personalizado 
-    ScrollTrigger.create({
-      trigger: "#entrenamiento-personalizado",
-      start: "top 80%",
-      once: true,
-      onEnter: () => {
-        gsap.to("#entrenamiento-titulo", { opacity: 1, y: 0, duration: 0.6 });
-        gsap.to("#entrenamiento-img", { opacity: 1, y: 0, duration: 0.6, delay: 0.2 });
-        gsap.to("#entrenamiento-hombros", { opacity: 1, x: 0, duration: 0.7, delay: 0.7, from: { x: -100 } });
-        gsap.to("#entrenamiento-pectorales", { opacity: 1, x: 0, duration: 0.7, delay: 1.2, from: { x: 100 } });
-        gsap.to("#entrenamiento-gluteos", { opacity: 1, x: 0, duration: 0.7, delay: 1.7, from: { x: -100 } });
-        gsap.to("#entrenamiento-pantorrillas", { opacity: 1, x: 0, duration: 0.7, delay: 2.2, from: { x: 100 } });
-      }
-    });
-  </script>
-</Layout>
+  }
+
+  // Animacion Entrenamiento Personalizado
+  ScrollTrigger.create({
+    trigger: "#entrenamiento-personalizado",
+    start: "top 80%",
+    once: true,
+    onEnter: () => {
+      gsap.to("#entrenamiento-titulo", { opacity: 1, y: 0, duration: 0.6 });
+      gsap.to("#entrenamiento-img", {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        delay: 0.2,
+      });
+      gsap.to("#entrenamiento-hombros", {
+        opacity: 1,
+        x: 0,
+        duration: 0.7,
+        delay: 0.7,
+        from: { x: -100 },
+      });
+      gsap.to("#entrenamiento-pectorales", {
+        opacity: 1,
+        x: 0,
+        duration: 0.7,
+        delay: 1.2,
+        from: { x: 100 },
+      });
+      gsap.to("#entrenamiento-gluteos", {
+        opacity: 1,
+        x: 0,
+        duration: 0.7,
+        delay: 1.7,
+        from: { x: -100 },
+      });
+      gsap.to("#entrenamiento-pantorrillas", {
+        opacity: 1,
+        x: 0,
+        duration: 0.7,
+        delay: 2.2,
+        from: { x: 100 },
+      });
+    },
+  });
+</script>

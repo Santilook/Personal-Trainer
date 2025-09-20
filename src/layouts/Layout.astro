@@ -7,15 +7,26 @@ import Navbar from "../components/Navbar.astro";
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Entrenador Personal en San Juan | Carlos Aguilera</title>
+		<meta name="description" content="Entrenador personal en San Juan. Planes personalizados, clases grupales, asesoramiento en fitness y nutrición. ¡Comienza tu transformación con Carlos Aguilera!" />
+		<meta name="keywords" content="entrenador personal, fitness, San Juan, entrenamiento personalizado, clases grupales, nutrición, gym, Carlos Aguilera" />
+		<meta name="author" content="Carlos Aguilera" />
+		<meta property="og:title" content="Entrenador Personal en San Juan | Carlos Aguilera" />
+		<meta property="og:description" content="Entrenador personal en San Juan. Planes personalizados, clases grupales, asesoramiento en fitness y nutrición." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://tusitioweb.com" />
+		<meta property="og:image" content="/assets/Logo.webp" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Entrenador Personal en San Juan | Carlos Aguilera" />
+		<meta name="twitter:description" content="Entrenador personal en San Juan. Planes personalizados, clases grupales, asesoramiento en fitness y nutrición." />
+		<meta name="twitter:image" content="/assets/Logo.webp" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bitcount+Grid+Double:wght@100..900&family=Bungee&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
 	</head>
 	<body>
 		<Navbar />
@@ -27,7 +38,9 @@ import Navbar from "../components/Navbar.astro";
 
 <style is:global>
 	@import "tailwindcss";
-
+	@theme {
+		--breakpoint-3xl: 100rem;
+	}
 	html,
 	body {
 		margin: 0;
@@ -50,23 +63,12 @@ import Navbar from "../components/Navbar.astro";
 	.animate-scroll-left {
 		animation: scroll-left 80s linear infinite;
 	}
-	.animate-scroll-right {
-		animation: scroll-right 80s linear infinite;
-	}
 	@keyframes scroll-left {
 		0% {
 			transform: translateX(0);
 		}
 		100% {
 			transform: translateX(-50%);
-		}
-	}
-	@keyframes scroll-right {
-		0% {
-			transform: translateX(0);
-		}
-		100% {
-			transform: translateX(50%);
 		}
 	}
 </style>
