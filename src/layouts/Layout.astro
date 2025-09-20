@@ -22,9 +22,9 @@ import Navbar from "../components/Navbar.astro";
 		<meta name="twitter:description" content="Entrenador personal en San Juan. Planes personalizados, clases grupales, asesoramiento en fitness y nutrición." />
 		<meta name="twitter:image" content="/assets/Logo.webp" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bitcount+Grid+Double:wght@100..900&family=Bungee&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 	</head>
@@ -32,15 +32,20 @@ import Navbar from "../components/Navbar.astro";
 		<Navbar />
 		<slot />
 		<ContactForm />
-	<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 	</body>
 </html>
 
 <style is:global>
 	@import "tailwindcss";
-	@theme {
-		--breakpoint-3xl: 100rem;
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+	@theme{
+		--breakpoint-3xl: 120rem;
 	}
+
+
+
 	html,
 	body {
 		margin: 0;

@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Entrenador from "../assets/Personas-entrenando.webp";
-import PersonasCorriendo from "../assets/Personas-corriendo.webp";
 import Logo from "../assets/Logo.webp";
 import Pesas from "../assets/pesas-verdes.webp";
 import about1 from "../assets/img-about-us.webp";
@@ -24,6 +23,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
       src={Entrenador.src}
       alt="Personas entrenando en gimnasio, fondo difuminado"
       title="Entrenador Personal Carlos Aguilera"
+      width="1920" height="1080"
       class="h-[100svh] md:h-[100vh] w-full object-cover object-center opacity-25 mask-b-from-80% mask-b-to-100%"
       loading="lazy"
     />
@@ -51,6 +51,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         src={Logo.src}
         alt="Logo Carlos Aguilera Personal Trainer"
         title="Logo Carlos Aguilera Personal Trainer"
+        width="300" height="300"
         class="absolute left-0 bottom-20 h-40 w-40 opacity-0 md:opacity-0 md:bottom-50 md:left-50 lg:top-50 lg:left-100 2xl:top-85 2xl:left-110 md:h-[200px] md:w-[200px] lg:h-[200px] lg:w-[200px] 2xl:h-[300px] 2xl:w-[300px] 3xl:left-[610px] z-20 transition-all duration-700"
         loading="lazy"
       />
@@ -80,6 +81,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
                   alt="Icono pesas"
                   title="Pesas"
                   class="h-5 md:h-8"
+                  width="32" height="32"
                   loading="lazy"
                 />
               </>
@@ -108,6 +110,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
                   alt="Icono pesas"
                   title="Pesas"
                   class="h-5 md:h-8"
+                  width="32" height="32"
                   loading="lazy"
                 />
               </>
@@ -134,6 +137,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
           class="absolute inset-0 w-full h-full object-cover object-top"
           alt="Entrenamiento - imagen superior 1"
           title="Entrenamiento imagen 1"
+          width="800" height="600"
           loading="lazy"
         />
       </div>
@@ -144,6 +148,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
           class="absolute inset-0 w-full h-full object-cover object-top"
           alt="Entrenamiento - imagen superior 2"
           title="Entrenamiento imagen 2"
+          width="800" height="600"
           loading="lazy"
         />
       </div>
@@ -271,6 +276,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         alt="Entrenador personal guiando a cliente"
         title="Entrenador personal guiando a cliente"
         class="object-cover h-[600px] w-[400px] 3xl:h-[600px] 3xl:w-full rounded-xl shadow-lg"
+        width="400" height="600"
         loading="lazy"
       />
       <img
@@ -278,6 +284,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         alt="Grupo de personas entrenando en gimnasio"
         title="Grupo de personas entrenando en gimnasio"
         class="absolute right-[-480px] top-10 object-cover h-[600px] w-[400px] 3xl:h-[600px] 3xl:w-full 3xl:right-[-700px] rounded-xl shadow-lg -translate-x-1/2"
+        width="400" height="600"
         loading="lazy"
       />
     </picture>
@@ -364,6 +371,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
           title="Entrenamiento personalizado"
           class="object-cover h-[700px] w-[95vw] md:h-[600px] md:w-[350px] lg:h-[700px] lg:w-[400px] mx-auto rounded-lg opacity-0"
           id="entrenamiento-img"
+          width="2228" height="3984"
           loading="lazy"
         />
         <div class="hidden md:block">
@@ -674,7 +682,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
     </button>
   </div>
 </Layout>
-
+<script type="module" src="/src/scripts/ui.js" />
 <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
