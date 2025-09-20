@@ -32,7 +32,7 @@ import Navbar from "../components/Navbar.astro";
 		<Navbar />
 		<slot />
 		<ContactForm />
-		<script type="module" src="/src/scripts/ui.js"></script>
+		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 	</body>
 </html>
 
@@ -44,11 +44,9 @@ import Navbar from "../components/Navbar.astro";
 	@theme{
 		--breakpoint-3xl: 120rem;
 	}
-
-	/* Importa solo los módulos Flowbite que uses */
-	@import "flowbite/src/components/dropdown";
-	@import "flowbite/src/components/modal";
-
+	@import "flowbite/src/themes/default";
+	@plugin "flowbite/plugin";
+	@source "../../node_modules/flowbite";
 	html,
 	body {
 		margin: 0;

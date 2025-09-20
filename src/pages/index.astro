@@ -500,7 +500,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
 
         <!-- Boton pectorales -->
         <button
-          id="button-pectorales"
+          
           data-popover-target="popover-pectorales"
           data-popover-trigger="click"
           type="button"
@@ -745,28 +745,29 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         duration: 0.6,
         delay: 0.2,
       });
-      gsap.to("#entrenamiento-hombros, #button-hombros", {
+      // Animar tanto los popovers como los botones en todos los breakpoints
+      gsap.to("#entrenamiento-hombros, #popover-hombros", {
         opacity: 1,
         x: 0,
         duration: 0.7,
         delay: 0.7,
         from: { x: -100 },
       });
-      gsap.to("#entrenamiento-pectorales, #button-pectorales", {
+      gsap.to("#entrenamiento-pectorales, #popover-pectorales", {
         opacity: 1,
         x: 0,
         duration: 0.7,
         delay: 1.2,
         from: { x: 100 },
       });
-      gsap.to("#entrenamiento-gluteos, #button-gluteos", {
+      gsap.to("#entrenamiento-gluteos, #popover-gluteos", {
         opacity: 1,
         x: 0,
         duration: 0.7,
         delay: 1.7,
         from: { x: -100 },
       });
-      gsap.to("#entrenamiento-pantorrillas, #button-pantorrillas", {
+      gsap.to("#entrenamiento-pantorrillas, #popover-pantorrillas", {
         opacity: 1,
         x: 0,
         duration: 0.7,
