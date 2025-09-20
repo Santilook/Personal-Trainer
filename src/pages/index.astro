@@ -500,6 +500,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
 
         <!-- Boton pectorales -->
         <button
+          id="button-pectorales"
           data-popover-target="popover-pectorales"
           data-popover-trigger="click"
           type="button"
@@ -532,6 +533,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         </div>
         <!-- Boton hombros -->
         <button
+          id="button-hombros"
           data-popover-target="popover-hombros"
           data-popover-trigger="click"
           type="button"
@@ -564,6 +566,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         </div>
         <!-- Boton gluteos -->
         <button
+          id="button-gluteos"
           data-popover-target="popover-gluteos"
           data-popover-trigger="click"
           type="button"
@@ -594,6 +597,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         </div>
         <!-- Boton pantorrillas -->
         <button
+          id="button-pantorrillas"
           data-popover-target="popover-pantorrillas"
           data-popover-trigger="click"
           type="button"
@@ -682,7 +686,6 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
     </button>
   </div>
 </Layout>
-<script type="module" src="/src/scripts/ui.js" />
 <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -742,28 +745,28 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         duration: 0.6,
         delay: 0.2,
       });
-      gsap.to("#entrenamiento-hombros", {
+      gsap.to("#entrenamiento-hombros, #button-hombros", {
         opacity: 1,
         x: 0,
         duration: 0.7,
         delay: 0.7,
         from: { x: -100 },
       });
-      gsap.to("#entrenamiento-pectorales", {
+      gsap.to("#entrenamiento-pectorales, #button-pectorales", {
         opacity: 1,
         x: 0,
         duration: 0.7,
         delay: 1.2,
         from: { x: 100 },
       });
-      gsap.to("#entrenamiento-gluteos", {
+      gsap.to("#entrenamiento-gluteos, #button-gluteos", {
         opacity: 1,
         x: 0,
         duration: 0.7,
         delay: 1.7,
         from: { x: -100 },
       });
-      gsap.to("#entrenamiento-pantorrillas", {
+      gsap.to("#entrenamiento-pantorrillas, #button-pantorrillas", {
         opacity: 1,
         x: 0,
         duration: 0.7,
