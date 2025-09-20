@@ -34,7 +34,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         class="relative w-full flex items-center justify-center overflow-visible"
       >
         <span
-          class="absolute left-10 bottom-15 md:left-15 md:bottom-30 text-2xl md:text-3xl font-bold lg:bottom-50 lg:left-25 2xl:left-35 3xl:left-60"
+          class="absolute left-10 bottom-15 md:left-15 md:bottom-30 text-2xl md:text-3xl font-bold lg:bottom-50 lg:left-25 2xl:left-35 3xl:left-75"
           >Entrenador</span
         >
         <span
@@ -42,7 +42,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
           >PERSONAL</span
         >
         <span
-          class="absolute right-10 top-15 md:right-25 md:top-30 text-2xl md:text-3xl font-bold lg:top-50 lg:right-35 2xl:right-50 3xl:right-75"
+          class="absolute right-10 top-15 md:right-25 md:top-30 text-2xl md:text-3xl font-bold lg:top-50 lg:right-35 2xl:right-50 3xl:right-90"
           >Carlos Aguilera</span
         >
       </h1>
@@ -499,12 +499,14 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         <!-- Popover visible solo en movil para la seleccion de musculo -->
 
         <!-- Boton pectorales -->
+      <div id="popover-buttons">
         <button
-          
+          id="button-pectorales"
           data-popover-target="popover-pectorales"
           data-popover-trigger="click"
           type="button"
-          class="absolute top-40 left-25 w-6 h-6 bg-cyan-400 rounded-full border-2 border-white md:hidden inline-flex size-3"
+          aria-label="Mostrar información de pectorales"
+          class="absolute top-40 left-25 w-7 h-7 bg-cyan-400 rounded-full border-2 border-white md:hidden inline-flex items-center justify-center size-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"
         >
           <span
             class="inline-flex h-full w-full animate-ping rounded-full bg-sky-600 opacity-75"
@@ -537,7 +539,8 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
           data-popover-target="popover-hombros"
           data-popover-trigger="click"
           type="button"
-          class="absolute top-36 right-34 w-6 h-6 bg-lime-400 rounded-full border-2 border-white md:hidden inline-flex size-3"
+          aria-label="Mostrar información de hombros"
+          class="absolute top-36 right-34 w-7 h-7 bg-lime-400 rounded-full border-2 border-white md:hidden inline-flex items-center justify-center size-3 focus:outline-none focus:ring-2 focus:ring-lime-500"
         >
           <span
             class="inline-flex h-full w-full animate-ping rounded-full bg-sky-600 opacity-75"
@@ -570,7 +573,8 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
           data-popover-target="popover-gluteos"
           data-popover-trigger="click"
           type="button"
-          class="absolute bottom-93 right-37 w-6 h-6 bg-lime-400 rounded-full border-2 border-white md:hidden inline-flex size-3"
+          aria-label="Mostrar información de glúteos"
+          class="absolute bottom-93 right-37 w-7 h-7 bg-lime-400 rounded-full border-2 border-white md:hidden inline-flex items-center justify-center size-3 focus:outline-none focus:ring-2 focus:ring-lime-500"
         >
           <span
             class="inline-flex h-full w-full animate-ping rounded-full bg-sky-600 opacity-75"
@@ -601,7 +605,8 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
           data-popover-target="popover-pantorrillas"
           data-popover-trigger="click"
           type="button"
-          class="absolute bottom-35 left-37 w-6 h-6 bg-cyan-400 rounded-full border-2 border-white md:hidden inline-flex size-3"
+          aria-label="Mostrar información de pantorrillas"
+          class="absolute bottom-35 left-37 w-7 h-7 bg-cyan-400 rounded-full border-2 border-white md:hidden inline-flex items-center justify-center size-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"
         >
           <span
             class="inline-flex h-full w-full animate-ping rounded-full bg-sky-600 opacity-75"
@@ -734,7 +739,7 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
 
   // Animacion Entrenamiento Personalizado
   ScrollTrigger.create({
-    trigger: "#entrenamiento-personalizado",
+    trigger: "#entrenamiento-personalizado, #popover-buttons",
     start: "top 80%",
     once: true,
     onEnter: () => {
@@ -746,28 +751,28 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         delay: 0.2,
       });
       // Animar tanto los popovers como los botones en todos los breakpoints
-      gsap.to("#entrenamiento-hombros, #popover-hombros", {
+      gsap.to("#entrenamiento-hombros", {
         opacity: 1,
         x: 0,
         duration: 0.7,
         delay: 0.7,
         from: { x: -100 },
       });
-      gsap.to("#entrenamiento-pectorales, #popover-pectorales", {
+      gsap.to("#entrenamiento-pectorales", {
         opacity: 1,
         x: 0,
         duration: 0.7,
         delay: 1.2,
         from: { x: 100 },
       });
-      gsap.to("#entrenamiento-gluteos, #popover-gluteos", {
+      gsap.to("#entrenamiento-gluteos", {
         opacity: 1,
         x: 0,
         duration: 0.7,
         delay: 1.7,
         from: { x: -100 },
       });
-      gsap.to("#entrenamiento-pantorrillas, #popover-pantorrillas", {
+      gsap.to("#entrenamiento-pantorrillas", {
         opacity: 1,
         x: 0,
         duration: 0.7,
