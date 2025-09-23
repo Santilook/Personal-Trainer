@@ -6,6 +6,8 @@ import Pesas from "../assets/pesas-verdes.webp";
 import about1 from "../assets/img-about-us.webp";
 import about2 from "../assets/img2-about-us.webp";
 import Entrenamiento from "../assets/entrenamiento.webp";
+import Certificado from "../assets/certificado.webp";
+import Credencial from "../assets/credencial.webp";
 
 // Define el patrón a repetir
 const items = [{ label: "Training" }, { label: "Fitness Sports" }];
@@ -23,7 +25,8 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
       src={Entrenador.src}
       alt="Personas entrenando en gimnasio, fondo difuminado"
       title="Entrenador Personal Carlos Aguilera"
-      width="1920" height="1080"
+      width="1920"
+      height="1080"
       class="h-[100svh] md:h-[100vh] w-full object-cover object-center opacity-25 mask-b-from-80% mask-b-to-100%"
       loading="lazy"
     />
@@ -51,7 +54,8 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         src={Logo.src}
         alt="Logo Carlos Aguilera Personal Trainer"
         title="Logo Carlos Aguilera Personal Trainer"
-        width="300" height="300"
+        width="300"
+        height="300"
         class="absolute left-0 bottom-20 h-40 w-40 opacity-0 md:opacity-0 md:bottom-50 md:left-50 lg:top-50 lg:left-100 2xl:top-85 2xl:left-110 md:h-[200px] md:w-[200px] lg:h-[200px] lg:w-[200px] 2xl:h-[300px] 2xl:w-[300px] 3xl:left-[610px] z-20 transition-all duration-700"
         loading="lazy"
       />
@@ -81,7 +85,8 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
                   alt="Icono pesas"
                   title="Pesas"
                   class="h-5 md:h-8"
-                  width="32" height="32"
+                  width="32"
+                  height="32"
                   loading="lazy"
                 />
               </>
@@ -110,7 +115,8 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
                   alt="Icono pesas"
                   title="Pesas"
                   class="h-5 md:h-8"
-                  width="32" height="32"
+                  width="32"
+                  height="32"
                   loading="lazy"
                 />
               </>
@@ -137,7 +143,8 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
           class="absolute inset-0 w-full h-full object-cover object-top"
           alt="Entrenamiento - imagen superior 1"
           title="Entrenamiento imagen 1"
-          width="800" height="600"
+          width="800"
+          height="600"
           loading="lazy"
         />
       </div>
@@ -148,7 +155,8 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
           class="absolute inset-0 w-full h-full object-cover object-top"
           alt="Entrenamiento - imagen superior 2"
           title="Entrenamiento imagen 2"
-          width="800" height="600"
+          width="800"
+          height="600"
           loading="lazy"
         />
       </div>
@@ -207,31 +215,30 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         Carlos Aguilera
       </h2>
       <p class="text-base md:text-lg">
-        Entrenador personal certificado con más de años de experiencia ayudando
-        a transformar vidas. Mi misión es guiarte a lograr tus objetivos de
-        salud y bienestar con planes personalizados, motivación constante y
-        resultados reales.
+        Mi objetivo es ser un Personal Trainer apasionado y motivado, y ayudar a
+        los clientes a alcanzar sus metas de fitness mediante un enfoque
+        profesional y empático.
       </p>
       <section
         class="w-full bg-gray-800 rounded-xl mt-6 md:mt-10 py-6 md:py-10 px-2 md:px-4 flex flex-wrap justify-center gap-4 md:gap-10"
       >
         <div class="flex flex-col items-center">
           <span class="text-2xl md:text-4xl font-extrabold text-white"
-            >+200</span
+            >+30</span
           >
           <span class="text-gray-300 text-sm md:text-lg mt-2"
             >Clientes Satisfechos</span
           >
         </div>
         <div class="flex flex-col items-center">
-          <span class="text-2xl md:text-4xl font-extrabold text-white">10+</span
+          <span class="text-2xl md:text-4xl font-extrabold text-white">2+</span
           >
           <span class="text-gray-300 text-sm md:text-lg mt-2"
             >Años de Experiencia</span
           >
         </div>
         <div class="flex flex-col items-center">
-          <span class="text-2xl md:text-4xl font-extrabold text-white">50+</span
+          <span class="text-2xl md:text-4xl font-extrabold text-white">10+</span
           >
           <span class="text-gray-300 text-sm md:text-lg mt-2"
             >Transformaciones</span
@@ -254,11 +261,80 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
           >
         </div>
         <div class="flex flex-col items-center">
-          <span class="text-2xl md:text-4xl font-extrabold text-white">+30</span
+          <span class="text-2xl md:text-4xl font-extrabold text-white">+10</span
           >
           <span class="text-gray-300 text-sm md:text-lg mt-2"
             >Clases Grupales</span
           >
+        </div>
+
+        <!-- Modal toggle -->
+        <button
+          data-modal-target="static-modal"
+          data-modal-toggle="static-modal"
+          class="block text-white bg-[#40602F] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center uppercase cursor-pointer hover:scale-105 transition-all duration-300"
+          type="button"
+        >
+          Mi certificado
+        </button>
+
+        <!-- Main modal -->
+        <div
+          id="static-modal"
+          data-modal-backdrop="static"
+          tabindex="-1"
+          aria-hidden="true"
+          class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+        >
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div
+              class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700"
+            >
+              <!-- Modal header -->
+              <div
+                class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200"
+              >
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  MI CERTIFICADO Y CREDENCIAL
+                </h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="static-modal"
+                >
+                  <svg
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 14"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <img
+                  src={Certificado.src}
+                  alt="Certifado de entrenador personal"
+                  class="h-[250px] w-[550px] md:h-[400px] md:w-[750px] mb-4"
+                />
+                <img
+                  src={Credencial.src}
+                  alt="Credencial de entrenador personal"
+                  class="h-[250px] w-[550px] md:h-[400px] md:w-[750px]"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -276,7 +352,8 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         alt="Entrenador personal guiando a cliente"
         title="Entrenador personal guiando a cliente"
         class="object-cover h-[600px] w-[400px] 3xl:h-[600px] 3xl:w-full rounded-xl shadow-lg"
-        width="400" height="600"
+        width="400"
+        height="600"
         loading="lazy"
       />
       <img
@@ -284,7 +361,8 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         alt="Grupo de personas entrenando en gimnasio"
         title="Grupo de personas entrenando en gimnasio"
         class="absolute right-[-480px] top-10 object-cover h-[600px] w-[400px] 3xl:h-[600px] 3xl:w-full 3xl:right-[-700px] rounded-xl shadow-lg -translate-x-1/2"
-        width="400" height="600"
+        width="400"
+        height="600"
         loading="lazy"
       />
     </picture>
@@ -297,31 +375,30 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         Carlos Aguilera
       </h2>
       <p class="text-base md:text-lg">
-        Entrenador personal certificado con más de años de experiencia ayudando
-        a transformar vidas. Mi misión es guiarte a lograr tus objetivos de
-        salud y bienestar con planes personalizados, motivación constante y
-        resultados reales.
+        Mi objetivo es ser un Personal Trainer apasionado y motivado, y ayudar a
+        los clientes a alcanzar sus metas de fitness mediante un enfoque
+        profesional y empático.
       </p>
       <section
-        class="w-full bg-gray-800 rounded-xl mt-6 md:mt-10 py-6 md:py-10 px-2 md:px-4 flex flex-wrap justify-center gap-4 md:gap-10"
+        class="relative w-full bg-gray-800 rounded-xl mt-6 md:mt-10 py-6 md:py-10 px-2 md:px-4 flex flex-wrap justify-center gap-4 md:gap-10"
       >
         <div class="flex flex-col items-center">
           <span class="text-2xl md:text-4xl font-extrabold text-white"
-            >+200</span
+            >+30</span
           >
           <span class="text-gray-300 text-sm md:text-lg mt-2"
             >Clientes Satisfechos</span
           >
         </div>
         <div class="flex flex-col items-center">
-          <span class="text-2xl md:text-4xl font-extrabold text-white">10+</span
+          <span class="text-2xl md:text-4xl font-extrabold text-white">2+</span
           >
           <span class="text-gray-300 text-sm md:text-lg mt-2"
             >Años de Experiencia</span
           >
         </div>
         <div class="flex flex-col items-center">
-          <span class="text-2xl md:text-4xl font-extrabold text-white">50+</span
+          <span class="text-2xl md:text-4xl font-extrabold text-white">10+</span
           >
           <span class="text-gray-300 text-sm md:text-lg mt-2"
             >Transformaciones</span
@@ -344,11 +421,79 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
           >
         </div>
         <div class="flex flex-col items-center">
-          <span class="text-2xl md:text-4xl font-extrabold text-white">+30</span
+          <span class="text-2xl md:text-4xl font-extrabold text-white">+10</span
           >
           <span class="text-gray-300 text-sm md:text-lg mt-2"
             >Clases Grupales</span
           >
+        </div>
+<!-- Modal toggle -->
+        <button
+          data-modal-target="static-modal-desktop"
+          data-modal-toggle="static-modal-desktop"
+          class="block text-white bg-[#40602F] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-1.0 text-center uppercase cursor-pointer hover:scale-105 transition-all duration-300"
+          type="button"
+        >
+          Mi certificado
+        </button>
+
+        <!-- Main modal -->
+        <div
+          id="static-modal-desktop"
+          data-modal-backdrop="static"
+          tabindex="-1"
+          aria-hidden="true"
+          class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+        >
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div
+              class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700"
+            >
+              <!-- Modal header -->
+              <div
+                class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200"
+              >
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  MI CERTIFICADO Y CREDENCIAL
+                </h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="static-modal-desktop"
+                >
+                  <svg
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 14"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <img
+                  src={Certificado.src}
+                  alt="Certifado de entrenador personal"
+                  class="h-[400px] w-[750px] mb-4"
+                />
+                <img
+                  src={Credencial.src}
+                  alt="Credencial de entrenador personal"
+                  class="h-[400px] w-[750px]"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -371,7 +516,8 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
           title="Entrenamiento personalizado"
           class="object-cover h-[700px] w-[95vw] md:h-[600px] md:w-[350px] lg:h-[700px] lg:w-[400px] mx-auto rounded-lg opacity-0"
           id="entrenamiento-img"
-          width="2228" height="3984"
+          width="2228"
+          height="3984"
           loading="lazy"
         />
         <div class="hidden md:block">
@@ -499,286 +645,293 @@ const repeatedItems = Array.from({ length: repeat }).flatMap(() => items);
         <!-- Popover visible solo en movil para la seleccion de musculo -->
 
         <!-- Boton pectorales -->
-      <div id="popover-buttons">
-        <button
-          id="button-pectorales"
-          data-popover-target="popover-pectorales"
-          data-popover-trigger="click"
-          type="button"
-          aria-label="Mostrar información de pectorales"
-          class="absolute top-40 left-25 w-7 h-7 bg-cyan-400 rounded-full border-2 border-white md:hidden inline-flex items-center justify-center size-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-        >
-          <span
-            class="inline-flex h-full w-full animate-ping rounded-full bg-sky-600 opacity-75"
-          ></span>
-        </button>
-        <div
-          data-popover
-          id="popover-pectorales"
-          role="tooltip"
-          class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
-        >
-          <div
-            class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+        <div id="popover-buttons">
+          <button
+            id="button-pectorales"
+            data-popover-target="popover-pectorales"
+            data-popover-trigger="click"
+            type="button"
+            aria-label="Mostrar información de pectorales"
+            class="absolute top-40 left-25 w-7 h-7 bg-cyan-400 rounded-full border-2 border-white md:hidden inline-flex items-center justify-center size-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"
           >
-            <h3 class="font-semibold text-gray-900 dark:text-white">
-              Pectorales
-            </h3>
-          </div>
-          <div class="px-3 py-2">
-            <p>
-              Ejercicios clave para volumen y definición: Press de banca,
-              aperturas con mancuernas y flexiones.
-            </p>
-          </div>
-          <div data-popper-arrow></div>
-        </div>
-        <!-- Boton hombros -->
-        <button
-          id="button-hombros"
-          data-popover-target="popover-hombros"
-          data-popover-trigger="click"
-          type="button"
-          aria-label="Mostrar información de hombros"
-          class="absolute top-36 right-34 w-7 h-7 bg-lime-400 rounded-full border-2 border-white md:hidden inline-flex items-center justify-center size-3 focus:outline-none focus:ring-2 focus:ring-lime-500"
-        >
-          <span
-            class="inline-flex h-full w-full animate-ping rounded-full bg-lime-600 opacity-75"
-          ></span>
-        </button>
-        <div
-          data-popover
-          id="popover-hombros"
-          role="tooltip"
-          class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
-        >
+            <span
+              class="inline-flex h-full w-full animate-ping rounded-full bg-sky-600 opacity-75"
+            ></span>
+          </button>
           <div
-            class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+            data-popover
+            id="popover-pectorales"
+            role="tooltip"
+            class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
           >
-            <h3 class="font-semibold text-gray-900 dark:text-white">
-              Hombros (Deltoides)
-            </h3>
+            <div
+              class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+            >
+              <h3 class="font-semibold text-gray-900 dark:text-white">
+                Pectorales
+              </h3>
+            </div>
+            <div class="px-3 py-2">
+              <p>
+                Ejercicios clave para volumen y definición: Press de banca,
+                aperturas con mancuernas y flexiones.
+              </p>
+            </div>
+            <div data-popper-arrow></div>
           </div>
-          <div class="px-3 py-2">
-            <p>
-              Para tonificar y dar forma: Press militar, elevaciones laterales y
-              pájaros con mancuernas.
-            </p>
-          </div>
-          <div data-popper-arrow></div>
-        </div>
-        <!-- Boton gluteos -->
-        <button
-          id="button-gluteos"
-          data-popover-target="popover-gluteos"
-          data-popover-trigger="click"
-          type="button"
-          aria-label="Mostrar información de glúteos"
-          class="absolute bottom-93 right-37 w-7 h-7 bg-lime-400 rounded-full border-2 border-white md:hidden inline-flex items-center justify-center size-3 focus:outline-none focus:ring-2 focus:ring-lime-500"
-        >
-          <span
-            class="inline-flex h-full w-full animate-ping rounded-full bg-lime-600 opacity-75"
-          ></span>
-        </button>
-        <div
-          data-popover
-          id="popover-gluteos"
-          role="tooltip"
-          class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
-        >
+          <!-- Boton hombros -->
+          <button
+            id="button-hombros"
+            data-popover-target="popover-hombros"
+            data-popover-trigger="click"
+            type="button"
+            aria-label="Mostrar información de hombros"
+            class="absolute top-36 right-34 w-7 h-7 bg-lime-400 rounded-full border-2 border-white md:hidden inline-flex items-center justify-center size-3 focus:outline-none focus:ring-2 focus:ring-lime-500"
+          >
+            <span
+              class="inline-flex h-full w-full animate-ping rounded-full bg-lime-600 opacity-75"
+            ></span>
+          </button>
           <div
-            class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+            data-popover
+            id="popover-hombros"
+            role="tooltip"
+            class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
           >
-            <h3 class="font-semibold text-gray-900 dark:text-white">Glúteos</h3>
+            <div
+              class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+            >
+              <h3 class="font-semibold text-gray-900 dark:text-white">
+                Hombros (Deltoides)
+              </h3>
+            </div>
+            <div class="px-3 py-2">
+              <p>
+                Para tonificar y dar forma: Press militar, elevaciones laterales
+                y pájaros con mancuernas.
+              </p>
+            </div>
+            <div data-popper-arrow></div>
           </div>
-          <div class="px-3 py-2">
-            <p>
-              Fortalece y levanta con: Sentadillas, hip thrust y zancadas
-              (lunges).
-            </p>
-          </div>
-          <div data-popper-arrow></div>
-        </div>
-        <!-- Boton pantorrillas -->
-        <button
-          id="button-pantorrillas"
-          data-popover-target="popover-pantorrillas"
-          data-popover-trigger="click"
-          type="button"
-          aria-label="Mostrar información de pantorrillas"
-          class="absolute bottom-35 left-37 w-7 h-7 bg-cyan-400 rounded-full border-2 border-white md:hidden inline-flex items-center justify-center size-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-        >
-          <span
-            class="inline-flex h-full w-full animate-ping rounded-full bg-sky-600 opacity-75"
-          ></span>
-        </button>
-        <div
-          data-popover
-          id="popover-pantorrillas"
-          role="tooltip"
-          class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
-        >
+          <!-- Boton gluteos -->
+          <button
+            id="button-gluteos"
+            data-popover-target="popover-gluteos"
+            data-popover-trigger="click"
+            type="button"
+            aria-label="Mostrar información de glúteos"
+            class="absolute bottom-93 right-37 w-7 h-7 bg-lime-400 rounded-full border-2 border-white md:hidden inline-flex items-center justify-center size-3 focus:outline-none focus:ring-2 focus:ring-lime-500"
+          >
+            <span
+              class="inline-flex h-full w-full animate-ping rounded-full bg-lime-600 opacity-75"
+            ></span>
+          </button>
           <div
-            class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+            data-popover
+            id="popover-gluteos"
+            role="tooltip"
+            class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
           >
-            <h3 class="font-semibold text-gray-900 dark:text-white">
-              Pantorrillas (Gemelos)
-            </h3>
+            <div
+              class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+            >
+              <h3 class="font-semibold text-gray-900 dark:text-white">
+                Glúteos
+              </h3>
+            </div>
+            <div class="px-3 py-2">
+              <p>
+                Fortalece y levanta con: Sentadillas, hip thrust y zancadas
+                (lunges).
+              </p>
+            </div>
+            <div data-popper-arrow></div>
           </div>
-          <div class="px-3 py-2">
-            <p>
-              Para fuerza y definición en las piernas: Elevaciones de talones
-              (de pie o sentado) y saltos de caja (box jumps).
-            </p>
+          <!-- Boton pantorrillas -->
+          <button
+            id="button-pantorrillas"
+            data-popover-target="popover-pantorrillas"
+            data-popover-trigger="click"
+            type="button"
+            aria-label="Mostrar información de pantorrillas"
+            class="absolute bottom-35 left-37 w-7 h-7 bg-cyan-400 rounded-full border-2 border-white md:hidden inline-flex items-center justify-center size-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          >
+            <span
+              class="inline-flex h-full w-full animate-ping rounded-full bg-sky-600 opacity-75"
+            ></span>
+          </button>
+          <div
+            data-popover
+            id="popover-pantorrillas"
+            role="tooltip"
+            class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+          >
+            <div
+              class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+            >
+              <h3 class="font-semibold text-gray-900 dark:text-white">
+                Pantorrillas (Gemelos)
+              </h3>
+            </div>
+            <div class="px-3 py-2">
+              <p>
+                Para fuerza y definición en las piernas: Elevaciones de talones
+                (de pie o sentado) y saltos de caja (box jumps).
+              </p>
+            </div>
+            <div data-popper-arrow></div>
           </div>
-          <div data-popper-arrow></div>
         </div>
       </div>
     </div>
-  </section>
 
-<!-- boton menu redes sociales fija -->
-  <div data-dial-init class="fixed end-6 bottom-6 group z-50">
-    <div
-      id="speed-dial-menu-default"
-      class="flex flex-col items-center hidden mb-4 space-y-6"
-    >
-      <!-- Botón WhatsApp -->
-      <a
-        href="https://w.app/carlosaguileramusculacionyfitness" target="_blank" rel="noopener noreferrer"
-        class="flex justify-center items-center w-[70px] h-[70px] text-green-500 hover:text-green-700 shadow-xs hover:hover:scale-125 transition-transform delay-100"
-        aria-label="WhatsApp"
+    <!-- boton menu redes sociales fija -->
+    <div data-dial-init class="fixed end-6 bottom-6 group z-50">
+      <div
+        id="speed-dial-menu-default"
+        class="flex flex-col items-center hidden mb-4 space-y-6"
       >
-        <!-- SVG WhatsApp desde iconos.min.svg -->
-        <svg class="size-40">
-          <use xlink:href="/assets/iconos.min.svg#whatsapp" />
-        </svg>
-      </a>
-      <!-- Botón Instagram -->
-      <a
-        href="https://www.instagram.com/carlos_sant_ag?igsh=MWpocGdiaHpwYmQ4OQ==" target="_blank" rel="noopener noreferrer"
-        class="flex justify-center items-center w-[70px] h-[70px] text-pink-500 hover:text-pink-700 shadow-xs hover:hover:scale-125 transition-transform delay-100"
-        aria-label="Instagram"
+        <!-- Botón WhatsApp -->
+        <a
+          href="https://w.app/carlosaguileramusculacionyfitness"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex justify-center items-center w-[70px] h-[70px] text-green-500 hover:text-green-700 shadow-xs hover:hover:scale-125 transition-transform delay-100"
+          aria-label="WhatsApp"
+        >
+          <!-- SVG WhatsApp desde iconos.min.svg -->
+          <svg class="size-40">
+            <use xlink:href="/assets/iconos.min.svg#whatsapp"></use>
+          </svg>
+        </a>
+        <!-- Botón Instagram -->
+        <a
+          href="https://www.instagram.com/carlos_sant_ag?igsh=MWpocGdiaHpwYmQ4OQ=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex justify-center items-center w-[70px] h-[70px] text-pink-500 hover:text-pink-700 shadow-xs hover:hover:scale-125 transition-transform delay-100"
+          aria-label="Instagram"
+        >
+          <!-- SVG Instagram desde iconos.min.svg -->
+          <svg class="size-30">
+            <use xlink:href="/assets/iconos.min.svg#instagram"></use>
+          </svg>
+        </a>
+      </div>
+      <button
+        type="button"
+        data-dial-toggle="speed-dial-menu-default"
+        aria-controls="speed-dial-menu-default"
+        aria-expanded="false"
+        class="flex items-center justify-center text-white bg-blue-700 rounded-full w-15 h-15 md:h-20 md:w-20 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
       >
-        <!-- SVG Instagram desde iconos.min.svg -->
-        <svg class="size-30">
-          <use xlink:href="/assets/iconos.min.svg#instagram" />
+        <svg
+          class="w-5 h-5 md:w-8 md:h-8 transition-transform group-hover:rotate-45"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 18 18"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 1v16M1 9h16"></path>
         </svg>
-      </a>
+        <span class="sr-only">Open actions menu</span>
+      </button>
     </div>
-    <button
-      type="button"
-      data-dial-toggle="speed-dial-menu-default"
-      aria-controls="speed-dial-menu-default"
-      aria-expanded="false"
-      class="flex items-center justify-center text-white bg-blue-700 rounded-full w-15 h-15 md:h-20 md:w-20 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
-    >
-      <svg
-        class="w-5 h-5 md:w-8 md:h-8 transition-transform group-hover:rotate-45"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 18 18"
-      >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M9 1v16M1 9h16"></path>
-      </svg>
-      <span class="sr-only">Open actions menu</span>
-    </button>
-  </div>
-</Layout>
-<script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  </section>
+  <script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-  gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-  // Animación SOLO para mobile (<768px)
-  if (window.matchMedia("(max-width: 767px)").matches) {
-    gsap.set("#logo", { left: 0, x: 0 });
-    gsap.to("#logo", {
-      left: "50%",
-      x: "-50%",
-      opacity: 1,
-      duration: 1.2,
-      ease: "ease-out",
-      delay: 0.5,
-    });
-  }
+    // Animación SOLO para mobile (<768px)
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      gsap.set("#logo", { left: 0, x: 0 });
+      gsap.to("#logo", {
+        left: "50%",
+        x: "-50%",
+        opacity: 1,
+        duration: 1.2,
+        ease: "ease-out",
+        delay: 0.5,
+      });
+    }
 
-  // Animación SOLO para md+
-  if (window.matchMedia("(min-width: 768px)").matches) {
-    // Timeline para controlar animación y hold SOLO en md+
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#hero-section",
-        start: "top top",
-        end: "+=100%",
-        pin: true,
-        scrub: 0,
-        anticipatePin: 1,
+    // Animación SOLO para md+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      // Timeline para controlar animación y hold SOLO en md+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#hero-section",
+          start: "top top",
+          end: "+=100%",
+          pin: true,
+          scrub: 0,
+          anticipatePin: 1,
+        },
+      });
+      tl.to("#logo", {
+        opacity: 1,
+        right: "50%",
+        x: "50%",
+        duration: 2,
+        ease: "power2.out",
+      });
+      tl.to("#logo", {
+        opacity: 1,
+        duration: 2,
+        ease: "none",
+      });
+    }
+
+    // Animacion Entrenamiento Personalizado
+    ScrollTrigger.create({
+      trigger: "#entrenamiento-personalizado, #popover-buttons",
+      start: "top 80%",
+      once: true,
+      onEnter: () => {
+        gsap.to("#entrenamiento-titulo", { opacity: 1, y: 0, duration: 0.6 });
+        gsap.to("#entrenamiento-img", {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          delay: 0.2,
+        });
+        // Animar tanto los popovers como los botones en todos los breakpoints
+        gsap.to("#entrenamiento-hombros", {
+          opacity: 1,
+          x: 0,
+          duration: 0.7,
+          delay: 0.7,
+          from: { x: -100 },
+        });
+        gsap.to("#entrenamiento-pectorales", {
+          opacity: 1,
+          x: 0,
+          duration: 0.7,
+          delay: 1.2,
+          from: { x: 100 },
+        });
+        gsap.to("#entrenamiento-gluteos", {
+          opacity: 1,
+          x: 0,
+          duration: 0.7,
+          delay: 1.7,
+          from: { x: -100 },
+        });
+        gsap.to("#entrenamiento-pantorrillas", {
+          opacity: 1,
+          x: 0,
+          duration: 0.7,
+          delay: 2.2,
+          from: { x: 100 },
+        });
       },
     });
-    tl.to("#logo", {
-      opacity: 1,
-      right: "50%",
-      x: "50%",
-      duration: 2,
-      ease: "power2.out",
-    });
-    tl.to("#logo", {
-      opacity: 1,
-      duration: 2,
-      ease: "none",
-    });
-  }
-
-  // Animacion Entrenamiento Personalizado
-  ScrollTrigger.create({
-    trigger: "#entrenamiento-personalizado, #popover-buttons",
-    start: "top 80%",
-    once: true,
-    onEnter: () => {
-      gsap.to("#entrenamiento-titulo", { opacity: 1, y: 0, duration: 0.6 });
-      gsap.to("#entrenamiento-img", {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        delay: 0.2,
-      });
-      // Animar tanto los popovers como los botones en todos los breakpoints
-      gsap.to("#entrenamiento-hombros", {
-        opacity: 1,
-        x: 0,
-        duration: 0.7,
-        delay: 0.7,
-        from: { x: -100 },
-      });
-      gsap.to("#entrenamiento-pectorales", {
-        opacity: 1,
-        x: 0,
-        duration: 0.7,
-        delay: 1.2,
-        from: { x: 100 },
-      });
-      gsap.to("#entrenamiento-gluteos", {
-        opacity: 1,
-        x: 0,
-        duration: 0.7,
-        delay: 1.7,
-        from: { x: -100 },
-      });
-      gsap.to("#entrenamiento-pantorrillas", {
-        opacity: 1,
-        x: 0,
-        duration: 0.7,
-        delay: 2.2,
-        from: { x: 100 },
-      });
-    },
-  });
-</script>
+  </script>
+</Layout>
